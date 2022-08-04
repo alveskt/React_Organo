@@ -8,7 +8,7 @@ const CampoTexto = (props) => {
     return (
         <div className='campo-texto'>
             <label>{props.label}</label>
-            <input 
+            <input type="text"
                 value={props.valor} 
                 onChange={digita} 
                 required={props.obrigatorio} 

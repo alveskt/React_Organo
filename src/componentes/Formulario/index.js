@@ -5,14 +5,15 @@ import Botao from '../Botao';
 import { useState } from 'react';
 
 const Formulario = (props) => {
-   
+
     const [nome, setNome] = useState('');
     const [cargo, setCargo] = useState('');
     const [matricula, setMatricula] = useState('');
-    const [imagem, setImagem] = useState('https://github.com/alveskt.png');
+    const [imagem, setImagem] = useState('');
     const [time, setTime] = useState('');
 
     const aoSalvar =(event) =>{
+        
         event.preventDefault();
         props.colaboradorCadastrado({
             nome,
@@ -38,7 +39,7 @@ const Formulario = (props) => {
                     valor={nome}
                     valorAlterado={valor => setNome(valor)}
                 />
-                 <CampoTexto 
+                <CampoTexto 
                     obrigatorio={true} 
                     label='Cargo' 
                     placeholder='Digite seu cargo'
@@ -52,7 +53,7 @@ const Formulario = (props) => {
                 valor={matricula}
                 valorAlterado={valor => setMatricula(valor)}
                 />
-                 <CampoTexto 
+                <CampoTexto 
                     obrigatorio={false} 
                     label='Imagem' 
                     placeholder='Escolha sua foto'
