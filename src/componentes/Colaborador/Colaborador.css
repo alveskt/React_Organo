@@ -20,8 +20,8 @@
     background: #FFFFFF;
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.08);
     border-radius: 0px 0px 10px 10px;
-    padding-top: 90px;
-    padding-bottom: 40px;
+    padding-top: 40px;
+    padding-bottom: 20px;
 }
 .colaborador .rodape h4{
     color: #6278F7;
@@ -35,4 +35,12 @@
     line-height: 22px;
     color: #212121;
     padding: 0 16px;
+}
+
+.colaborador .botao-excluir {
+    border: none;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 89%;
 }

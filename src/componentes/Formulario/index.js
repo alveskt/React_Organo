@@ -8,7 +8,8 @@ const Formulario = (props) => {
    
     const [nome, setNome] = useState('');
     const [cargo, setCargo] = useState('');
-    const [imagem, setImagem] = useState('');
+    const [matricula, setMatricula] = useState('');
+    const [imagem, setImagem] = useState('https://github.com/alveskt.png');
     const [time, setTime] = useState('');
 
     const aoSalvar =(event) =>{
@@ -16,11 +17,13 @@ const Formulario = (props) => {
         props.colaboradorCadastrado({
             nome,
             cargo,
+            matricula,
             imagem,
             time
         })
         setNome('')
         setCargo('')
+        setMatricula('')
         setImagem('')
         setTime('')   
     }
@@ -41,6 +44,13 @@ const Formulario = (props) => {
                     placeholder='Digite seu cargo'
                     valor={cargo}
                     valorAlterado={valor => setCargo(valor)}
+                />
+                <CampoTexto 
+                obrigatorio={true} 
+                label='Matricula' 
+                placeholder='Digite sua matrícula'
+                valor={matricula}
+                valorAlterado={valor => setMatricula(valor)}
                 />
                  <CampoTexto 
                     obrigatorio={false} 

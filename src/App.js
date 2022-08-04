@@ -52,6 +52,13 @@ function App() {
       colaborador
     ]);
   }
+
+  const handleColabDelet = (colaboradorMatricula) => {
+    const colabDelet = colaboradores.filter(colaborador => colaborador.matricula !== colaboradorMatricula )
+    setColaboradores(colabDelet);
+  }
+
+
   return (
     <div className="App">
       <Banner />
@@ -63,6 +70,7 @@ function App() {
           corPrimaria={time.corPrimaria} 
           corSecundaria={time.corSecundaria}
           colaboradores={colaboradores.filter(colaborador => colaborador.time === time.nome)}
+          delet = {handleColabDelet}
         />
       )}
       <Rodape />
