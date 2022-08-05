@@ -20,21 +20,19 @@ const Colaborador = ({nome, img, cargo, matricula, corSec, corPrim, delet}) => {
     return (
         <div className='colaborador'>
             <div className='cabecalho' style={{backgroundColor: corPrim}}>
-                <img src={newImage ? img : perfil} alt='Imagem de Perfil'/>
                 <div className='botao-excluir__container'>
                     <button className='botao-excluir' onClick={() => delet(matricula)} style={ {backgroundColor: corSec}}>
                         <CgClose />
                     </button>
                 </div>
             </div>
-            
+            <div className='img-perfil' style={ {backgroundColor: corPrim}}>   
+                <img src={newImage ? img : perfil} alt='Imagem de Perfil'/>
+            </div>
             <div className='rodape'>
-                <h4 style={{ color: corSec}}>{nome}</h4>
+                <h4 style={{ color: corPrim}}>{nome}</h4>
                 <h5>{cargo}</h5>
-                <h5>{matricula}</h5>
-                
-                
-                
+                <h5>{matricula}</h5>  
             </div>  
         </div>
     )
