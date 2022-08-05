@@ -4,12 +4,11 @@
 }
 .colaborador .cabecalho {
     background-color: #f0f0f0;
-    border-radius: 10px 10px 0px 0px;    
-    
-    
+    border-radius: 10px 10px 0px 0px;       
 }
 .colaborador img {
     width: 100px;
+    height: 100px;
     border-radius: 50%;
     position: relative;
     bottom: -50px;
@@ -40,4 +39,8 @@
     font-size: 16px;
     border-radius: 15px;
     cursor: pointer;
+}
+
+.botao-excluir__container {
+    display: flex;
 }
