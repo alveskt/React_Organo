@@ -19,7 +19,7 @@ const Time = (props) => {
                         cargo={colaborador.cargo} 
                         matricula={colaborador.matricula} 
                         img={colaborador.imagem} 
-                        corSec ={corSecundaria}
+                        corSec ={corPrimaria}
                         delet = {props.delet}
                     />)}
                 </div>
